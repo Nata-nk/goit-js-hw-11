@@ -25,7 +25,6 @@ const onSearchFormSubmit = event => {
         spanLoader.classList.remove('loader');
             if (date.hits.length === 0) {
                 iziToast.show({
-        iconUrl: /img/x.svg,
         message: 'Sorry, there are no images matching your search query. Please try again!',
         color: '#ef4040',
         theme: 'dark',
