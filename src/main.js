@@ -24,12 +24,13 @@ const onSearchFormSubmit = event => {
         .then(date => {
         spanLoader.classList.remove('loader');
             if (date.hits.length === 0) {
-                iziToast.error({
+                iziToast.show({
         message: 'Sorry, there are no images matching your search query. Please try again!',
         color: '#ef4040',
         theme: 'dark',
-                    position: 'topRight',
+        position: 'topRight',
         iconUrl: './img/bi_x-octagon.svg',
+        imageWidth: 24,
         maxWidth: 360,
         });   
 }
@@ -44,3 +45,5 @@ new SimpleLightbox('.gallery-link', { captionsData: 'alt', captionDelay: 250 }).
 }
 
 searchFormEl.addEventListener('submit', onSearchFormSubmit)
+
+console.dir(iziToast.show);
